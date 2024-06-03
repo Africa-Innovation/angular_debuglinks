@@ -67,6 +67,20 @@ body {
 .verification{
     color: orange;
 }
+
+
+.password-container {
+    /* display: flex; */
+    align-items: center;
+}
+.password-container input {
+    flex: 1;
+}
+.password-container .eye-icon {
+    cursor: pointer;
+    margin-left: -30px;
+}
+
 .formbutton{
     text-align: center;
 }

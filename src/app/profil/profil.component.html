@@ -19,7 +19,7 @@
         </div>
         <!-- email-password-form.component.html -->
     
-        <form  (ngSubmit)="logout()">
+        
             <div class="content">
                 <div>
                     <p class="username">Username : {{getUsername}}</p>
@@ -29,10 +29,10 @@
                  
             </div>
             <div class="formbutton">
-                <button  class="firstB">Se Deconnecter</button>
+                <button (click)="logout()" class="firstB">Se Deconnecter</button>
                 
             </div>
-        </form>
+         
     
     
     </main>

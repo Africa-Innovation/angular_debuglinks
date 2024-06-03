@@ -31,9 +31,12 @@
                     </div>
                 </div>
     
-                <div>
+                <div class="password-container">
                     <label for="password"></label>
-                    <input type="password" id="password" formControlName="password" placeholder="Entrez votre mot de passe">
+                    <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="password" placeholder="Entrez votre mot de passe">
+                    <mat-icon class="eye-icon" (click)="togglePasswordVisibility()">
+                        {{ showPassword ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
                     <div *ngIf="usernamePasswordForm.get('password')?.errors && usernamePasswordForm.get('password')?.touched">
                         <div *ngIf="usernamePasswordForm.get('password')?.hasError('required')" class="verification">Mot de passe requis</div>
                     </div>

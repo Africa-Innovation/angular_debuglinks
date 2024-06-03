@@ -3,8 +3,8 @@
     <header>
       <div class="menu-icon" (click)="toggleMenu()">&#9776;</div>
       <ul class="men">
-        <li>Profil</li>
-        <li>About Us</li>
+        <li (click)="goToProfil()">Profil</li>
+        <li (click)="goToAbout()">About Us</li>
         <li class="active">My Debug Links</li>
       </ul>
       <div class="profile-pic"> <!-- Ajoute ici l'image de profil --> </div>

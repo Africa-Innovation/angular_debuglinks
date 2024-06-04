@@ -45,16 +45,18 @@ export class ProfilComponent {
     })
   }
   logout() {
-    //
-    this.service.logout().subscribe((res: any) => {
-      if (res.success) {
-        //supprimer token au logout
-        localStorage.removeItem('token');
-        console.log('token:', localStorage.getItem('token'));
-        this.router.navigate(['/login']);
-      }
-    })
+    if (confirm("Voulez-vous vraiment vous déconnecter ?")) {
+      this.service.logout().subscribe((res: any) => {
+        if (res.success) {
+          // Supprimer le token au logout
+          localStorage.removeItem('token');
+          console.log('token:', localStorage.getItem('token'));
+          this.router.navigate(['/login']);
+        }
+      });
+    }
   }
+  
 
 
 }
